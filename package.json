@@ -6,12 +6,40 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "@angular/animations": "4.4.0-RC.0",
+    "@angular/common": "4.4.0-RC.0",
+    "@angular/compiler": "4.4.0-RC.0",
+    "@angular/compiler-cli": "4.4.0-RC.0",
+    "@angular/core": "4.4.0-RC.0",
+    "@angular/forms": "4.4.0-RC.0",
+    "@angular/http": "4.4.0-RC.0",
+    "@angular/platform-browser": "4.4.0-RC.0",
+    "@angular/platform-browser-dynamic": "4.4.0-RC.0",
+    "@angular/platform-server": "4.4.0-RC.0",
+    "@angular/router": "4.4.0-RC.0",
+    "@angular/upgrade": "4.4.0-RC.0",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
+    "core-js": "^2.5.1",
     "debug": "~2.6.3",
     "express": "~4.15.2",
     "hbs": "~4.0.1",
     "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
+    "rxjs": "^5.4.3",
+    "serve-favicon": "~2.4.2",
+    "zone.js": "^0.8.17"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.43",
+    "@types/node": "^8.0.28",
+    "angular2-router-loader": "0.3.5",
+    "angular2-template-loader": "0.6.2",
+    "awesome-typescript-loader": "3.2.3",
+    "del-cli": "1.1.0",
+    "html-loader": "0.5.1",
+    "typescript": "2.5.2",
+    "raw-loader": "0.5.1",
+    "webpack": "3.5.6",
+    "webpack-merge": "4.1.0"
   }
 }
