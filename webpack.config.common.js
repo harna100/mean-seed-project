@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-      'app': './assests/app/main.ts'
+      'app': './assets/app/main.ts'
   },
     resolve:{
       extensions: ['.js', '.ts']
@@ -12,18 +12,27 @@ module.exports = {
       loaders:[
           {
               test:/\.ts$/,
-              loaders:['awesome-typescript-loader',
-                  'angular-template-loader',
-                  'angualr2-router-loader']
+              loaders:[
+                  'awesome-typescript-loader',
+                  'angular2-template-loader',
+                  'angular2-router-loader'
+              ]
           },
           {
               test: /\.html$/,
-              loaders:'html'
+              loaders:'html-loader'
           },
           {
               test:/\.css/,
-              loader: 'raw'
+              loader: 'raw-loader'
           }
       ]
-    }
+    },
+    plugins: [
+        new webpack.ContextReplacementPlugin(
+            // (\\|/) for unix and windows
+            /angular(\\|\/)core(\\|\/)@angular/,
+            __dirname + '../src'
+        )
+    ]
 };
