@@ -194,12 +194,18 @@ Webstorm requires nodejs and npm for its autocomplete to fully work
   * If you don't have a jetbrains student account create one now [https://www.jetbrains.com/student/](https://www.jetbrains.com/student/)
 2. Open project in webstorm
 3. Add new deployment server
- * Settings>build,execution,deployment>deployment
- * Enter server info
- * Use SFTP for type and provide ssh credentials
-   * Your webstorm ssh key will be in your user directory (`c:\Users\<YourUserName>`) under `.ssh` select `webstorm_rsa` **NOT** `webstorm_rsa.pub`
+  * Settings>build,execution,deployment>deployment
+  * Enter server info
+  * Use SFTP for type and provide ssh credentials
+    * Your webstorm ssh key will be in your user directory (`c:\Users\<YourUserName>`) under `.ssh` select `webstorm_rsa` **NOT** `webstorm_rsa.pub`
 4. Set auto upload
- * Deployment>options
- * Upload changed files...
+  * Deployment>options
+  * Upload changed files...
 5. Do initial deployment
- * Right click project>deployment>sync deployed to
+  * Right click project>deployment>sync deployed to
+ 
+### Setting up git in bash
+1. Set username and email
+  * git config --global user.name "<UserName>
+  * git config --global user.email "<Email>"
+  * git config --globabl core.editor "nano"
