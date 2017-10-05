@@ -206,6 +206,6 @@ Webstorm requires nodejs and npm for its autocomplete to fully work
  
 ### Setting up git in bash
 1. Set username and email
-  * git config --global user.name "<UserName>
-  * git config --global user.email "<Email>"
-  * git config --globabl core.editor "nano"
+  * `git config --global user.name "<UserName>`
+  * `git config --global user.email "<Email>"`
+  * `git config --globabl core.editor "nano"`
