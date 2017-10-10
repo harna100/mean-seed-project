@@ -170,7 +170,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysq
   * ctrl+x then y
 7. Find the ip address of the vm
   * `ip a s`
-8. Test ssh connection
+8. Test ssh connection from outside the vm in bash
   * `ssh ubuntu@<Ip From above>`
   * You shouldn't be prompted for password, it should just log you in
 9. Add an entry to ssh config file
