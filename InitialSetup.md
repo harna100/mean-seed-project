@@ -209,3 +209,17 @@ Webstorm requires nodejs and npm for its autocomplete to fully work
   * `git config --global user.name "<UserName>"`
   * `git config --global user.email "<Email>"`
   * `git config --globabl core.editor "nano"`
+
+### Accessing mysql from datagrip
+1. Open datagrip
+2. Add new datasource
+  * File>New>Datasource>Mysql
+3. Enter in the info
+  * Host: localhost
+  * User: root
+  * Password: se330
+4. Switch to SSH/SSL tab
+  * Check `Use SSH tunnel`
+  * Enter vm ip for proxy host, port is 22
+  * Proxy user: ubuntu
+  * Pick keypair or password
