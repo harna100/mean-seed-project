@@ -1,3 +1,5 @@
+var path = require('path');
+
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
 var commonConfig = require('./webpack.config.common.js');
@@ -5,29 +7,31 @@ var commonConfig = require('./webpack.config.common.js');
 const Uglify = require('uglifyjs-webpack-plugin');
 
 module.exports = webpackMerge.smart(commonConfig, {
-    entry:{
+    entry: {
         'app': './assets/app/main.aot.ts'
     },
-    output:{
-        path: __dirname + '/public/js/app',
-        filename:'bundle.js',
-        publicPath: 'js/app/',
-        chunkFilename:'[id].[hash].chunk.js'
+
+    output: {
+        path: path.resolve(__dirname + '/public/js/app'),
+        filename: 'bundle.js',
+        publicPath: '/js/app/',
+        chunkFilename: '[id].[hash].chunk.js'
     },
-    module:{
-        loaders:[
+
+    module: {
+        rules: [
             {
                 test: /\.ts$/,
-                loaders:[
+                use: [
                     'awesome-typescript-loader',
                     'angular2-template-loader',
-                    'angular2-router-loader?aot-true&genDir=public/js/app'
+                    'angular2-router-loader?aot=true'
                 ]
             }
         ]
     },
-    plugins:[
-        new webpack.NoEmitOnErrorsPlugin(),
+
+    plugins: [
         new Uglify()
     ]
 });
